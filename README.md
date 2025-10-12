@@ -1,6 +1,6 @@
 # Bank Management System - XBank
 
-Welcome to **XBank**, a web-based banking management system built using **Java**, **JDBC**, **Servlet**, and **Web Technologies (Bootstrap)**.  
+Welcome to **XBank**, a web-based banking management system built using **Java**, **JDBC**, **Servlet**,**MySql** and **Web Technologies (Bootstrap)**.  
 This project demonstrates the core banking functionalities such as account creation, login validation, deposit, withdrawal, fund transfer, balance check, and transaction history management.
 
 ---
