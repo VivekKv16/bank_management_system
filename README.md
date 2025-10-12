@@ -40,11 +40,11 @@ To run this project locally:
 3. **Add the required JAR files** to your project build path:
    - `mysql-connector.jar`
    - `servlet-api.jar`
-   - 
+    
 4. **Set up the MySQL database:**
    - Create a new database named `xbank`.
    - Import the provided SQL file (if available) or manually create tables for `users`, `transactions`, etc.
-   - 
+    
 5. **Update database credentials** in your JDBC connection file (e.g., `DBConnection.java`):
    ```java
    String url = "jdbc:mysql://localhost:3306/xbank";
