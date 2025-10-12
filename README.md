@@ -46,7 +46,7 @@ To run this project locally:
    - Import the provided SQL file (if available) or manually create tables for `users`, `transactions`, etc.
     
 5. **Update database credentials** in your JDBC connection file (e.g., `DBConnection.java`):
-   
+   ```java
    String url = "jdbc:mysql://localhost:3306/xbank";
    String username = "root";
    String password = "your_password";
