@@ -51,6 +51,9 @@ To run this project locally:
    String username = "root";
    String password = "your_password";
 
+## 🧩 Future Enhancements
 
-
-  
+- Add admin panel for user management.  
+- Include email/SMS notifications for transactions.  
+- Enhance UI with animations and better responsiveness.  
+- Implement role-based authentication and audit logs.
