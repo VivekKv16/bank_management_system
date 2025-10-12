@@ -1,0 +1,109 @@
+<!-- displayBalance.jsp -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Balance - XBank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #D3DAD9;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .navbar {
+            border-bottom: 2px solid #ffc107;
+        }
+
+        .card {
+            border-radius: 15px;
+            border: 2px solid #ffc107;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+            border-color: #fd7e14;
+        }
+
+        .btn-primary {
+            background-color: #ffc107;
+            border: none;
+            color: #212529;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s;
+            border-radius: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #fd7e14;
+            transform: scale(1.05);
+        }
+
+        .balance-text {
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 20px;
+            color: #343a40;
+        }
+
+        a.text-decoration-none {
+            color: #fd7e14;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        a.text-decoration-none:hover {
+            color: #d35400;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light ps-5">
+    <div class="container-fluid">
+        <a class="navbar-brand fs-4" href="#">X<span class="text-warning">Bank</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto mb-1 mb-lg-0 fs-6 text-center">
+                <li class="nav-item ps-4">
+                    <a class="nav-link text-dark" href="main.html">Dashboard</a>
+                </li>
+                <li class="nav-item ps-4">
+                    <a class="nav-link text-dark" href="#">Profile</a>
+                </li>
+                <li class="nav-item ps-4">
+                    <a class="nav-link text-dark" href="#">Settings</a>
+                </li>
+                <li class="nav-item ps-4">
+                    <a class="nav-link text-dark" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="card shadow-lg p-4 mx-auto" style="max-width: 450px;">
+        <h3 class="text-center mb-4 text-dark">Your Balance</h3>
+
+        <div class="balance-text">
+            <h5><b>$</b></h5> <%= request.getAttribute("balfetch") %>
+        </div>
+
+        <div class="text-center mt-3">
+            <a href="main.html" class="text-decoration-none"> Back to Dashboard</a>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

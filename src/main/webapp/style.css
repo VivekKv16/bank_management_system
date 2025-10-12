@@ -1,0 +1,13 @@
+.carousel-inner img{
+    height:90vh;
+    width: 100%;
+}
+.img-fluid{
+    border-radius: 7%;
+    height: 300px;
+    width: 60%;
+}
+#btn1{
+    background-color: #F8F4E1;
+}
+
