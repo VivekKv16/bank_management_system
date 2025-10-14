@@ -14,10 +14,10 @@ import static java.lang.System.out;
 
 @WebServlet("/checkBalance")
 public class CheckBalance extends HttpServlet {
+
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         String password = req.getParameter("password");
-
 
         try (Connection con = ProvideConnection.giveusConnection()) {
             String sqry = "select * from bankaccount where password=?";
