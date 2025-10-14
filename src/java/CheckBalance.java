@@ -1,5 +1,8 @@
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -10,9 +13,9 @@ import java.sql.Timestamp;
 import static java.lang.System.out;
 
 @WebServlet("/checkBalance")
-public class CheckBalance extends GenericServlet {
+public class CheckBalance extends HttpServlet {
     @Override
-    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         String password = req.getParameter("password");
 
 
