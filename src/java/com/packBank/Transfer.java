@@ -1,3 +1,5 @@
+package com.packBank;
+
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -69,7 +71,7 @@ public class Transfer extends HttpServlet {
                 rd.forward(req, res);
             } else {
                 con.rollback();
-                res.getWriter().println("Transfer failed: invalid account or insufficient balance.");
+                res.getWriter().println("com.packBank.Transfer failed: invalid account or insufficient balance.");
             }
 
         } catch (Exception e) {

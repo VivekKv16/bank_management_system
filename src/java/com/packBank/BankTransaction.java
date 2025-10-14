@@ -1,3 +1,5 @@
+package com.packBank;
+
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.util.Scanner;
@@ -86,7 +88,7 @@ public class BankTransaction {
                 }
             } else{
                 System.out.println("No Record Found");
-                System.out.println("Login Failed");
+                System.out.println("com.packBank.Login Failed");
             }
 
         }
@@ -112,7 +114,7 @@ public class BankTransaction {
     private static void loginMenu() {
 
         System.out.println("1. withdraw");
-        System.out.println("2. deposit");
+        System.out.println("2. com.packBank.deposit");
         System.out.println("3.  Check Balance");
         System.out.println("4. transfer Amount");
         System.out.println("5. transaction");
@@ -126,7 +128,7 @@ public class BankTransaction {
         long accountNumber = sc.nextLong();
         System.out.println("Enter your Password:");
         String password = sc.next();
-        System.out.println("Enter the Amount to Withdraw:");
+        System.out.println("Enter the Amount to com.packBank.Withdraw:");
         double amount = sc.nextDouble();
 
         con = ProvideConnection.giveusConnection();
@@ -150,7 +152,7 @@ public class BankTransaction {
                     recordTrnsactionHistory("withdraw", amount, accountNumber);
 
                 } else {
-                    System.out.println("Withdraw Failed");
+                    System.out.println("com.packBank.Withdraw Failed");
                 }
             }
         }
@@ -183,13 +185,13 @@ public class BankTransaction {
                 ps2.setString(3, password);
                 int updated = ps2.executeUpdate();
                 if (updated > 0) {
-                    recordTrnsactionHistory("deposit", amount, accountNumber);
+                    recordTrnsactionHistory("com.packBank.deposit", amount, accountNumber);
                     System.out.println("Deposit Successfull");
                     double remainingBalance = balfetch + amount;
-                    System.out.println("deposit Successfull..... Remaining balance: " + remainingBalance);
+                    System.out.println("com.packBank.deposit Successfull..... Remaining balance: " + remainingBalance);
 
                 } else {
-                    System.out.println("deposit Failed");
+                    System.out.println("com.packBank.deposit Failed");
                 }
             }
         }
@@ -311,7 +313,7 @@ public class BankTransaction {
 //        }
 //    }
 
-//void deposit(double amount){
+//void com.packBank.deposit(double amount){
 //    if(amount>0){
 //        double bal=b.getBalance();
 //        bal=bal+amount;

@@ -1,4 +1,4 @@
-//
+package com.packBank;//
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by FernFlower decompiler)
 //
@@ -16,7 +16,7 @@ public class Main {
         while(true) {
             while(true) {
                 System.out.println("1. Create Account");
-                System.out.println("2. Login");
+                System.out.println("2. com.packBank.Login");
                 System.out.println("3. Exit");
                 Scanner sc = new Scanner(System.in);
                 System.out.println("Enter Your choice : ");

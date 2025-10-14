@@ -1,17 +1,17 @@
 # Bank Management System - XBank
 
 Welcome to **XBank**, a web-based banking management system built using **Java**, **JDBC**, **Servlet**, **MySQL** and **Web Technologies (Bootstrap)**.  
-This project demonstrates the core banking functionalities such as account creation, login validation, deposit, withdrawal, fund transfer, balance check, and transaction history management.
+This project demonstrates the core banking functionalities such as account creation, login validation, com.packBank.deposit, withdrawal, fund transfer, balance check, and transaction history management.
 
 ---
 
 ## 🚀 Features
 
-- **User Registration & Login** – Create a new account or log in with valid credentials.  
-- **Deposit & Withdraw** – Securely handle money transactions.  
+- **User Registration & com.packBank.Login** – Create a new account or log in with valid credentials.  
+- **Deposit & com.packBank.Withdraw** – Securely handle money transactions.  
 - **Balance Enquiry** – Check account balance instantly.  
-- **Fund Transfer** – Transfer money between accounts.  
-- **Transaction History** – View all previous transactions.  
+- **Fund com.packBank.Transfer** – com.packBank.Transfer money between accounts.  
+- **com.packBank.Transaction History** – View all previous transactions.  
 - **Responsive UI** – Developed using **HTML**, **CSS**, and **Bootstrap** for a modern and user-friendly experience.
 
 ---
