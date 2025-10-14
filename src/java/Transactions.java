@@ -1,5 +1,8 @@
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.sql.*;
@@ -7,10 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/transaction")
-public class Transactions extends GenericServlet {
+public class Transactions extends HttpServlet {
 
     @Override
-    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         long accountNumber = Long.parseLong(req.getParameter("accountNumber"));
         List<CheckBalance.Transaction> transactions = new ArrayList<>();
 

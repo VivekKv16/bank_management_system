@@ -1,5 +1,8 @@
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -8,13 +11,13 @@ import java.sql.ResultSet;
 
 import static java.lang.System.out;
 @WebServlet("/login")
-public class Login extends GenericServlet {
+public class Login extends HttpServlet {
 
     static Connection con=null;
     static PreparedStatement ps=null;
 
     @Override
-    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         String email=req.getParameter("email");
         String password=req.getParameter("password");
 

@@ -1,6 +1,9 @@
 
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -10,12 +13,12 @@ import static java.lang.System.out;
 
 
 @WebServlet("/signup")
-public class Signup extends GenericServlet {
+public class Signup extends HttpServlet {
 
     static PreparedStatement ps=null;
     static Connection con=null;
     @Override
-    public void service(ServletRequest req, ServletResponse resp) throws ServletException, IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name=req.getParameter("name");
         String email=req.getParameter("email");
         String password=req.getParameter("password");
