@@ -34,7 +34,7 @@ public class Login extends HttpServlet {
                 rd.forward(req, res);
             }
             else{
-                res.getWriter().println("<h3>Failed to com.packBank.Login</h3>");
+                res.getWriter().println("<h3>Failed to Login</h3>");
             }
 
         }

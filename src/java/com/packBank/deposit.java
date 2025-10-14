@@ -13,7 +13,7 @@ import java.sql.ResultSet;
 
 import static java.lang.System.out;
 
-@WebServlet("/com.packBank.deposit")
+@WebServlet("/deposit")
 public class deposit extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -40,7 +40,7 @@ public class deposit extends HttpServlet {
                     rd.forward(req, res);
                 }
                 else {
-                    res.getWriter().println("<h2>failed to com.packBank.deposit<h2>");
+                    res.getWriter().println("<h2>failed to deposit<h2>");
                 }
             }
         }

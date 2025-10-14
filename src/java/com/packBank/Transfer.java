@@ -71,7 +71,7 @@ public class Transfer extends HttpServlet {
                 rd.forward(req, res);
             } else {
                 con.rollback();
-                res.getWriter().println("com.packBank.Transfer failed: invalid account or insufficient balance.");
+                res.getWriter().println("Transfer failed: invalid account or insufficient balance.");
             }
 
         } catch (Exception e) {
