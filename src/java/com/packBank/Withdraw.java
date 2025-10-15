@@ -36,7 +36,7 @@ public class Withdraw extends HttpServlet {
                     ps2.setString(2,password);
                     int updated = ps2.executeUpdate();
                     if(updated>0){
-                        long accountNumber = rs.getLong("accountNumber");
+                        long accountNumber = Login.getAccount();
                         RecordTransaction.recordTransactions(con, "WITHDRAWAL", amount, accountNumber);
                         RequestDispatcher rd=req.getRequestDispatcher("main.html");
                         rd.forward(req, res);

@@ -34,8 +34,8 @@ public class deposit extends HttpServlet {
                 int update=ps2.executeUpdate();
                 if(update>0){
 
-                    long accountNumber = rs.getLong("accountNumber");
-                    RecordTransaction.recordTransactions(con, "WITHDRAWAL", amount, accountNumber);
+                    long accountNumber = Login.getAccount();
+                    RecordTransaction.recordTransactions(con, "Deposit", amount, accountNumber);
                     RequestDispatcher rd=req.getRequestDispatcher("main.html");
                     rd.forward(req, res);
                 }

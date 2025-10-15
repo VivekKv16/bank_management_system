@@ -15,6 +15,8 @@ import static java.lang.System.out;
 @WebServlet("/login")
 public class Login extends HttpServlet {
 
+    static long accNo;
+
     static Connection con=null;
     static PreparedStatement ps=null;
 
@@ -42,5 +44,8 @@ public class Login extends HttpServlet {
         catch(Exception e){
             e.printStackTrace(out);
         }
+    }
+    static  long getAccount(){
+        return accNo;
     }
 }
