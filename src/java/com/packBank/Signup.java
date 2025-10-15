@@ -16,6 +16,9 @@ import static java.lang.System.out;
 @WebServlet("/signup")
 public class Signup extends HttpServlet {
 
+    static String name;
+    static String email;
+
     static PreparedStatement ps=null;
     static Connection con=null;
     @Override
@@ -45,6 +48,12 @@ public class Signup extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace(out);
         }
+    }
+    static String getname(){
+        return name;
+    }
+    static String getemail(){
+        return email;
     }
 
 
